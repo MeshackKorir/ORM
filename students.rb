@@ -11,8 +11,19 @@ class Student
         @name = name 
         @email = email
         @course = course
-    end    
-
+    end   
+    
+    # class methods ==> table
+    def self.create_table
+        table = <<-SQL
+        CREATE TABLE students(
+            id INTEGER PRIMARY KEY,
+            name TEXT
+            email TEXT
+            course TEXT
+        )
+        SQL
+    end   
 end 
 
 #instance of the class
