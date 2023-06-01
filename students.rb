@@ -17,4 +17,4 @@ end
 
 #instance of the class
 student1 = Student.new(id: 1, name: "Meshack", email: "meshackkorir100@gmail.com", course: "software developer")
-puts = student1.course
+puts student1.course
