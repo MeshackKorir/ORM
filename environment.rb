@@ -1,5 +1,5 @@
 # This one will link the DB to ruby and VS
-require "bundler"
+require "bundler" #this helps you to down;oad all the packages or gems
 Bundle.require
 
 #add the class files
