@@ -1,6 +1,6 @@
 # This one will link the DB to ruby and VS
 require "bundler" #this helps you to down;oad all the packages or gems
-Bundle.require
+Bundler.require
 
 #add the class files
 require_relative `students.rb`

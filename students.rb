@@ -23,9 +23,18 @@ class Student
             course TEXT
         )
         SQL
-    end   
+        DB[:conn].execute(table)
+    end  
+    
+    def save
+        row = <<-SQL
+        INSERT INTO students(name, email, course)
+        VALUES(?,?,?) 
+        SQL
+        DB[:conn].execute(row, self.name, self.email, self.course)
+    end    
 end 
 
 #instance of the class
-student1 = Student.new(id: 1, name: "Meshack", email: "meshackkorir100@gmail.com", course: "software developer")
-puts student1.course
+# student1 = Student.new(id: 1, name: "Meshack", email: "meshackkorir100@gmail.com", course: "software developer")
+# puts student1.course
